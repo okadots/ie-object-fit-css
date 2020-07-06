@@ -1,12 +1,11 @@
-# ie-object-fit-css
+# IE11 Object Fit CSS, to extend Object Fit Images by Fregante.
 
-The purpose of this repo is to assist in supporting `object-fit` and `object-position` in IE11 using [TailwindCSS](https://tailwindcss.com/).
+The purpose of this repo is to assist in supporting `object-fit` and `object-position` in IE11 using [TailwindCSS](https://tailwindcss.com/). 
 
 To use:
 1. [Enable](https://github.com/tailwindcss/tailwindcss/pull/1635) `target:ie11` in your Tailwind config. This removes the `object-fit` related classes.
-2. Add `o
+2. Add `object-fit-polyfill` to your css, make sure it is included after the Tailwind utilities.
+3. Install [object-fit-images](https://github.com/fregante/object-fit-images). You will not need to make any css changes as `object-fit-polyfill` in this repo already provides the necessary changes.
 
-//target ie11 is enabled which removes the object-fit and object-fit classes as they are not supported in ie11
-//this scss file is meant to replace those so the other functionality of the tailwind targets are still usable
-//also using postcss-object-fit-images and object-fit-images polyfills to support object-fit and object-position in ie11
-//postcss-object-fit-images does not currently support the object-position classes and will not support custom object postions (eg. from focal point)
+Note: Depending on the javascript your project is using, IE11 may not support it.  Ensure that your javascript is working properly otherwise this won't work!
+
