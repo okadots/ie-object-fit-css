@@ -1,0 +1,86 @@
+//target ie11 is enabled which removes the object-fit and object-fit classes as they are not supported in ie11
+//this scss file is meant to replace those so the other functionality of the tailwind targets are still usable
+//also using postcss-object-fit-images and object-fit-images polyfills to support object-fit and object-position in ie11
+//postcss-object-fit-images does not currently support the object-position classes and will not support custom object postions (eg. from focal point)
+@responsive {
+  .object-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .object-cover {
+
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .object-fill {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+
+  .object-none {
+    -o-object-fit: none;
+       object-fit: none;
+  }
+
+  .object-scale-down {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+  }
+
+  .object-bottom {
+  	font-family: "object-position:bottom";
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .object-center {
+  	font-family: "object-position:center";
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .object-left {
+  	font-family: "object-position:left";
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .object-left-bottom {
+  	font-family: "object-position:left bottom";
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .object-left-top {
+  	font-family: "object-position:left top";
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .object-right {
+  	font-family: "object-position:right";
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .object-right-bottom {
+  	font-family: "object-position:right bottom";
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .object-right-top {
+	font-family: "object-position:right top";
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .object-top {
+  	font-family: "object-position:top";
+    -o-object-position: top;
+       object-position: top;
+  }
+
+}
